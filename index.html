@@ -1,40 +1,64 @@
 <head>
     <title>this is just test html</title>
     <style tpye="text/css">
-    img {width: 300px;}
+    body {color:brown;}
+    #container{
+        background: #079760;
+        height:300px;
+        width: 70%;
+    }
+    #item{
+        border: 1px solid #cccccc;
+        height: 50px;
+        width:50%;
+        margin:0 auto;
+        text-align:center;
+    }
     </style>
     <script>
     var cnt = 1;
-    function imgToggle(){
-        var img1=document.getElementById("img1");
-
-        if(cnt%3==1){
-            img1.src="images/san2.jpg";
-        }else if(cnt%3==2){
-            img1.src="images/san3.jpg";
-        }else{
-            img1.src="images/san1.jpg";
+    var show = true;
+    function imgShow(){
+        var img=document.getElementById("img1");
+        show=!show;
+        if(show){
+            img.src="images/san1.jpg";
+            cnt=1;
         }
-        cnt++;
+        else
+            img.src="images/waaaa.jpg";
+    }
+
+    function imgToggle(){
+        var img=document.getElementById("img1");
+
+        if(show){
+            if(cnt%3==1)
+                img.src="images/san2.jpg";
+            else if(cnt%3==2)
+                img.src="images/san3.jpg";
+            else
+                img.src="images/san1.jpg";
+            cnt++;
+        }
     }
     </script>
 </head>
-<body>
+<body style="background-color:aquamarine">
     <ul>
         <li>click <a href="./data/list1.html">here</a> to go see list1.html</li>
         <li>click <a href="./data/list2.html">here</a> to go see list2.html</li>
     </ul>
+    <div id="container">
+        <strong>
+        <div id='item'>1번칸</div>
+        <div id='item'>2번칸</div>
+        </strong>
+    </div>
+
     <input type="button" value="산화 산화" onclick="imgToggle()">
+    <input type="button" value="보이기" onclick="imgShow()">
     <br>
     <img src="images/san1.jpg" id="img1" height="500px">
 
-    <img src="./images/a.jpg" height="500px">
-    <p style="margin-left:90px;margin-right:100px;">
-    Hypertext Markup Language (HTML) is the standard markup language for
-     <strong>creating <u>web</u> pages</strong>
-      and web applications.Web browsers receive HTML documents from a web server
-       or from local storage and render them into multimedia web pages.
-        HTML describes the structure of a web page semantically and originally
-         included cues for the appearance of the document.
-    </p>
 </body>
