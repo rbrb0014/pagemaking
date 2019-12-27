@@ -1,0 +1,41 @@
+.load{
+
+}
+.lazy{
+
+}
+.ani{
+
+}
+element.style{
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    border-radius: 24px;
+    background-repeat: no-repeat;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid rgb(17, 17, 17);
+    background-image: url(https://img.koreapas.com/i/c2ef4d2/thumb);
+}
+div {
+    display: block;
+}
+Style Attribute {
+    cursor: pointer;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+BODY, SELECT, blockquote, center, form, option, pre {
+    font-family: 'Noto Sans KR','Apple SD Gothic Neo','Apple SD 산돌고딕 Neo', 'Roboto', 'Malgun Gothic' , '맑은고딕' ,'나눔고딕',"Nanum Gothic",'굴림','돋움',Dotum,'Helvetica',sans-serif !important;
+    color: #000;
+    line-height: 130%;
+    letter-spacing: -0.5px;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
